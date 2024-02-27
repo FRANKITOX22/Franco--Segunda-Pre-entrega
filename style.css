@@ -1,0 +1,406 @@
+/* Reset de estilos para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos para la sección del héroe */
+.hero-section {
+    background-image: url('imagen/comidasalud4k.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Estilos para la superposición de color */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 71, 17, 0.699); /* Color semitransparente, puedes ajustar el valor de opacidad (0.5) según tus preferencias */
+}
+
+/* Estilos para el contenido dentro del héroe */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(144, 199, 142); /* Color del texto */
+}
+
+.titulo-sitio {
+    font-family: 'Playfair Display', serif; /* Fuente del título */
+    font-size: 3rem; /* Tamaño del título */
+}
+
+/* Estilos del encabezado */
+h2, h3, h4, h5, h6 {
+    color: #61876e;
+}
+
+h2 {
+    font-size: 55px;
+    text-align: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav {
+    background-color: transparent; /* Fondo transparente para el nav */
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+    background-color: #a4bc92;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 70px;
+    display: inline-block;
+    transition: text-decoration 0.3s;  /* Agregamos transición para suavizar el cambio */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Subrayar el texto al pasar el ratón sobre el enlace */
+}
+
+.contenido-sobrenosotros {
+    background-color: #61876e;
+    color: #fff;
+}
+
+/* Estilos de las secciones principales */
+.contenido-sobrenosotros, .about-services, .dirigido-a {
+    padding: 40px 0;
+}
+
+/* Estilos de las imágenes */
+.imagen-about-us, .galeria-port img, .card img, .servicio-ind img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos de la sección de recetas */
+.container section {
+    padding: 40px 0;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #a4bc92;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Estilos del artículo */
+.article {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilos de la barra lateral */
+aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Estilos de la sección de contenido */
+#content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#content .article {
+    flex: 0 0 calc(30% - 20px);
+}
+
+/* Estilos de las tarjetas de clientes */
+.dirigido-a {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Estilos de la sección de servicios */
+.about-services {
+    background-color: #f5f5dc; /* Color de fondo de la sección de servicios */
+    padding: 20px 0;
+}
+
+.servicio-ind {
+    text-align: center;
+    margin: 20px;
+}
+
+.servicio-ind img {
+    max-width: 100%;
+    border-radius: 8px; /* Bordes redondeados para las imágenes de servicios */
+}
+
+/* Estilos de las secciones con borde y detalles */
+.with-border {
+    border: 2px solid rgba(5, 71, 17, 0.699);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.with-border .contenido-sobrenosotros {
+    display: flex;
+    align-items: center;
+}
+
+.with-border .imagen-about-us {
+    max-width: 50%; /* Ajusta el porcentaje según el tamaño deseado */
+    border-radius: 8px 0 0 8px;
+}
+
+.with-border .contenedor-textos {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.with-border h2.titulo {
+    margin-bottom: 10px;
+    color:rgba(5, 71, 17, 0.699);
+}
+
+.with-border p {
+    font-size: 18px; /* Ajusta el tamaño del texto según tus preferencias */
+}
+
+.with-border ul {
+    font-size: 16px; /* Ajusta el tamaño de la lista según tus preferencias */
+}
+
+.with-border ol {
+    font-size: 16px; /* Ajusta el tamaño de la lista ordenada según tus preferencias */
+}
+
+/* Estilo del título centralizado */
+.titulo-centralizado {
+    text-align: center;
+    margin-top: 100px; /* Ajuste de margen superior para centrar el título */
+}
+
+/* Estilos del footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos del contenedor del footer */
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Estilos del contenido del footer */
+.content-foo h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos del título final del footer */
+.titulo-final {
+    margin-top: 20px;
+}
+
+/* Estilos específicos para Acerca de Nosotros */
+.contenedor-imagen-texto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen-about-us {
+    width: 60%; /* Establece el ancho de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    border-radius: 8px; /* Agrega bordes redondeados a la imagen */
+    padding: 60px;
+}
+
+/* Estilos para la sección de recetas */
+.recetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.receta {
+    width: 45%;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border: 2px solid rgba(5, 71, 17, 0.699);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.receta img {
+    width: 55%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 60px;
+}
+
+.texto-receta {
+    padding: 20px;
+}
+
+.texto-receta h2 {
+    color: rgba(5, 71, 17, 0.699);
+    margin-bottom: 10px;
+}
+
+.texto-receta p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos para la sección "Cómo Empezar a Comer Saludable" */
+.contenido-como-empezar {
+    padding: 40px;
+}
+
+.contenido-como-empezar h3 {
+    color: #61876e;
+    margin-top: 20px;
+}
+
+.contenido-como-empezar p, .contenido-como-empezar ul, .contenido-como-empezar ol {
+    margin-top: 10px;
+}
+
+.contenido-como-empezar ul, .contenido-como-empezar ol {
+    margin-left: 20px;
+}
+
+.contenido-como-empezar li {
+    margin-bottom: 20px;
+}
+
+.contenido-como-empezar .article {
+    margin-bottom: 30px;
+}
+
+.contenido-como-empezar img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 20px 20px 0;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenido de los artículos */
+.contenido-como-empezar .article {
+    overflow: hidden;
+}
+
+/* Estilos específicos para la sección "Acerca de Nosotros" */
+#acerca-de {
+    padding: 40px;
+    background-color: #f5f5f5; 
+    text-align: center;
+}
+
+.contenedor-imagen-texto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.imagen-about-us {
+    max-width: 50%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+.contenedor-textos-acerca {
+    max-width: 40%;
+    padding: 0 20px; 
+}
+
+.contenedor-textos-acerca h3 {
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.contenedor-textos-acerca p {
+    font-size: 16px;
+    line-height: 1.6; 
+}
+
+.contenedor-textos-acerca ul {
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+.contenedor-textos-acerca ul li {
+    list-style: none; 
+    margin-bottom: 10px; 
+    font-size: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .receta,
+    .contenido-como-empezar img,
+    .imagen-about-us {
+        width: 100%;
+    }
+}
